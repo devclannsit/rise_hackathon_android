@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http.response import HttpResponseNotFound, HttpResponseRedirect,HttpResponse
 from users.forms import FileForm,AdhaarForm,LoginForm
 from users.models import Test,Adhaar,LoggedIn
+import schemes
 
 # Create your views here.
 def home(request):
@@ -53,7 +54,7 @@ def profile(request):
         name=request.session['logged_user']
     
         a=Adhaar.objects.get(uid__exact=name)
-        context={'a':a}
+        context={'a':a, 'schemes' : schemes.data}
         return render(request,'users/profile.html',context)
     else:
         return HttpResponseRedirect('/login/')

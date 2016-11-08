@@ -2,10 +2,10 @@
 <html> 
 	<head>
 	{% load static %}
--		{% load widget_tweaks %}
+		{% load widget_tweaks %}
 		<title>Profile</title>
 		<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
--		<link href="{% static 'css/theme-style.css' %}" rel='stylesheet' type='text/css' />
+		<link href="{% static 'css/theme-style.css' %}" rel='stylesheet' type='text/css' />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" type="image/x-icon" href="images/fav-icon.png" />
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -16,7 +16,7 @@
 		<!--//webfonts-->
 		<!--requred-js-files-->
 	    <script src="{% static 'js/jquery.min.js' %}"></script>
--	    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+	    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 		<!--//requred-js-files-->
 	</head>
 	<body>
@@ -66,7 +66,7 @@
 								<!-- SIDEBAR USER TITLE -->
 								<div class="profile-usertitle">
 									<div class="profile-usertitle-name">
-										Marcus Doe<!-- NAME -->
+										{{ a.name }}<!-- NAME -->
 									</div>
 									<div class="profile-usertitle-job">
 										<!-- JOB -->
@@ -94,6 +94,12 @@
 											<i class="glyphicon glyphicon-flag"></i>
 											Help </a>
 										</li>
+										<li>
+											<a href="/logout/">
+											<i class="glyphicon glyphicon-flag"></i>
+											Logout </a>
+										</li>
+
 									</ul>
 								</div>
 								<!-- END MENU -->
@@ -102,14 +108,16 @@
 						<div class="col-md-9">
 				            <div class="profile-content">
 							   <!--Put for loop for schemes-->
-							    <center><img src="{% static 'images/beema.jpg' %}" class="img-responsive" width="90%"><center>
-							  	<br>
-							  	<br>
-							  	<center><img src="{% static 'images/fasal.jpg' %}" class="img-responsive" width="90%"><center>
-							  	<br>
-							  	<br>
-							  	<center><img src="{% static 'images/suraksha.jpg' %}" class="img-responsive" width="90%"></center>
-							  	<br>
+
+							   	{% for scheme in schemes %}
+								
+								{% if a.dep in scheme.occupation or scheme.occupation == "" %}
+									<center><h3><a href="{{ scheme.url }}">{{ scheme.name }}</a></h3></center>
+								    <center><img src="{{ scheme.image_url }}" class="img-responsive" width="90%"><center>
+								  	<br>
+
+								{% endif %}
+							  	{% endfor %}
 				            </div>
 						</div>
 					</div>
