@@ -57,28 +57,11 @@
     <p id="chatlog3" class="chatlog">&nbsp;</p>
     <p id="chatlog2" class="chatlog">&nbsp;</p>
     <p id="chatlog1" class="chatlog">&nbsp;</p>
-    <input type="text" name="chat" id="chatbox" placeholder="Hi there! Type here to talk to me." onfocus="placeHolder()">
+    <input type="text" name="chat" class="col-md-10" id="chatbox" placeholder="Hi there! Type here to talk to me." onfocus="placeHolder()">
   </div>
 
 				<!--start-footer-->
-				<div class="footer">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-6 footer-left">
-								<ul>
-									<li><a href="#"><img src="{% static 'images/footer-logo.png' %}" title="logo" /></a></li>
-									
-								</ul>
-							</div>
-							<div class="col-md-6 footer-right">
-								<ul>
-									<li><a class="twitter" href="#"><span> </span></a></li>
-									<li><a class="facebook" href="#"><span> </span></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
+				
 				<!--//End-footer-->
 			<!--//End-container-->
 		
@@ -101,7 +84,7 @@
 		//****************************************************************
 		//****************************************************************
 		//edit this function to change what the chatbot says
-		/*-------function chatbotResponse() {
+		function chatbotResponse() {
 		  talking = true;
 		  botMessage = "I'm confused"; //the default message
 
@@ -112,7 +95,7 @@
 		  if (lastUserMessage === 'name') {
 		    botMessage = 'My name is ' + botName;
 		  }
-		}-------*/
+		}
 		//****************************************************************
 		//****************************************************************
 		//****************************************************************

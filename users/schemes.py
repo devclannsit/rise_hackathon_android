@@ -26,4 +26,13 @@ data = [
 		"uage" : "50"
 	},
 
+        {
+		"name" : "Pradhan Mantri Atal Pension Yojana",
+		"url" : "Banking/insurance/pradhan-mantri-bima-yojana.page",
+		"image_url" : "/static/images/suraksha.jpg",
+		"occupation" : "",
+		"lage" : "18",
+		"uage" : "50"
+	},
+
 ]
