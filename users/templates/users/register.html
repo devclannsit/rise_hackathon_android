@@ -1,0 +1,348 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html> 
+	<head>
+		{% load static %}
+		{% load widget_tweaks %}
+		<title>Flat-Mate Website Template | Home :: w3layouts</title>
+		<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+		<link href="{% static 'css/theme-style.css' %}" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="images/fav-icon.png" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		<!--webfonts-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
+		<!--//webfonts-->
+		<!--requred-js-files-->
+	    <script src="{% static 'js/jquery.min.js' %}"></script>
+	    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<!--//requred-js-files-->
+	</head>
+	<body>
+		<!--start-bg-->
+		<div class="bg2">
+			<!--start-container-->
+			<div class="container">
+				<!-- start-header-->
+				<div class="row header">
+					<div class="row">
+						<div class="col-md-6">
+							<!--start-logo-->
+							<div class="well logo">
+								<a href="#"><img src="{% static 'images/logo.png' %}" title="Flatmate" /></a>
+							</div>
+							<!--//End-logo-->
+						</div>
+						<div class="well col-md-6">
+							<!--start-header-right-->
+							<div class="login-info well header-right">
+								<p><a class="login btn-primary" href="#">Login</a></p>
+							</div>
+							<!--//End-header-right-->
+						</div>
+					</div>
+				</div>
+					<!-- //End-header-->
+					<!--slide-banner-->
+					<!-- <div class="well slide-banner row">
+						<div class="slide-banner-left col-md-8">
+							<span> </span>
+							<h1>Power to You</h1>
+							<p>Now information is one click away.<br> 
+							Get the complete benefits of the schemes announced specially for you.<br> 
+							Register with us NOW.</p>
+							<p><a class="btn btn-primary btn-lg b-btn" href="#"> Guide Me</a></p>
+						</div>
+						<div class="well slide-banner-right col-md-4">
+							<img src="images/adhaar.png" class="img-responsive" alt="" /> 
+						</div>
+						<div class="clearfix"> </div>
+					</div> -->
+					<center><div class="slide-banner-left col-md-12">
+							<span> </span>
+							<h1>Register</h1>
+						</div></center>
+					<!--//slide-banner-->
+				</div>
+				</div>
+				<!--start-top-grids-->
+				<div class="top-grids">
+					<div class="container">
+						<div class="top-grid-left col-md-3">
+							<a href="#"><img src="{% static 'images/icon2.png' %}" class="img-responsive" title="doc" /></a>
+						</div>
+
+						<h3>&nbsp Enter Adhaar No.</h3>
+						<br>
+
+	<form role="form" action="{% url 'users:enter'%}" method="POST">
+								{% csrf_token %}
+						<div class="top-grid-center col-md-9">
+							<div class="form-group">
+				                <div class="icon-addon addon-lg">
+				                    <!--<input type="text" placeholder="Adhaar Number" class="form-control" id="email">-->
+				                    {{ form.uid|add_class:"form-control"|attr:"id:email"|attr:"placeholder:Aadhaar Number" }}
+				                    <label for="email" class="glyphicon glyphicon-qrcode" rel="tooltip" title="email"></label>
+				                </div>
+				            </div>
+						</div>
+						<br>
+						<br>
+
+						<div class="container">
+
+						<div class="row">
+						    <div class="col-xs-12 col-sm-12 col-md-12 ">
+									<h2> <small>Enter Your Details</small></h2>
+									<hr class="colorgraph">
+						            <div class="form-group">
+						    			<!-- <input type="text" name="nome" id="nome" class="form-control input-lg" placeholder="Nome Completo" tabindex="3"> -->
+						    			{{ form.name|add_class:"form-control input-lg"|attr:"id:nome"|attr:"placeholder:Name on Aadhaar"|attr:"tabindex:3"}}
+
+									</div>
+									<div class="row">
+						            	<div class="col-xs-5 col-sm-5 col-md-5">
+						                
+											<div class="form-group">
+						                        <!-- <input type="text" name="dn" id="dn" class="form-control input-lg" placeholder="Data de Nascimento" tabindex="1"> -->
+						                        {{ form.gender|add_class:"form-control input-lg"|attr:"id:nome"|attr:"placeholder:Gender(M/F)"|attr:"tabindex:1"}}
+											</div>
+										</div>
+										<div class="col-xs-3 col-sm-3 col-md-3">
+											<div class="form-group">
+												<!-- <input type="text" name="idade" id="idade" class="form-control input-lg" placeholder="Idade" tabindex="2"> -->
+												{{ form.yob|add_class:"form-control input-lg"|attr:"id:nome"|attr:"placeholder:Year Of Birth"|attr:"tabindex:2"}}
+											</div>
+										</div>
+						                <div class="col-xs-4 col-sm-4 col-md-4">
+						    				<div class="form-group">
+											    <!-- <select id="estadocivil" name="estadocivil"  class="form-control input-lg" tabindex="2">
+											    						                            <option value="">Estado Civil</option>
+											    						                            <option value="Casado(a)">Casado(a)</option>
+											    						                            <option>Divorciado(a)</option>
+											    						                            <option>Solteiro(a)</option>
+											    						                        </select> -->
+											    {{ form.dep|add_class:"form-control input-lg"|attr:"id:nome"|attr:"placeholder:dep"|attr:"tabindex:2"}}						                        
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<!-- <input type="text" name="endereco" id="endereco" class="form-control input-lg" placeholder="Endereço" tabindex="3"> -->
+										{{ form.lm|add_class:"form-control input-lg"|attr:"id:nome"|attr:"placeholder:lm"|attr:"tabindex:3"}}
+									</div>
+									<div class="form-group">
+										<!-- <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email" tabindex="4"> -->
+										{{ form.loc|add_class:"form-control input-lg"|attr:"id:nome"|attr:"placeholder:loc"|attr:"tabindex:4"}}
+									</div>
+						            <div class="row">
+						                <div class="col-xs-5 col-sm-5 col-md-5">
+											<div class="form-group">
+						                        <!-- <select id="curso" name="curso"  class="form-control input-lg"  tabindex="2">
+						                            <option value="">Curso</option>
+						                            <option value="Aquicultura">Aquicultura</option>
+						                            <option value="Agroecologia">Agroecologia</option>
+						                        </select> -->
+						                        {{ form.vtc|add_class:"form-control input-lg"|attr:"id:nome"|attr:"placeholder:vtc"|attr:"tabindex:2"}}
+											</div>
+										</div>
+										<div class="col-xs-4 col-sm-4 col-md-4">
+											<div class="form-group">
+												<!-- <select id="curso" name="curso"  class="form-control input-lg"  tabindex="2">
+																		                            <option value="">Modalidade</option>
+																		                            <option value="Integrado">Integrado</option>
+																		                            <option value="Subsequente">Subsequente</option>
+																		                            <option value="Superior">Superior</option>
+																		                            <option value="Parfor">Parfor</option>
+																		                        </select> -->
+											{{ form.po|add_class:"form-control input-lg"|attr:"id:nome"|attr:"placeholder:po"|attr:"tabindex:2"}}							                        
+											</div>
+										</div>
+						            </div>
+						            <div class="row">
+										<div class="col-xs-4 col-sm-4 col-md-4">
+											<div class="form-group">
+												<!-- <input type="text" name="bimestre" id="bimestre" class="form-control input-lg" placeholder="Bimestre" tabindex="2"> -->
+												{{ form.dist|add_class:"form-control input-lg"|attr:"id:nome"|attr:"placeholder:dist"|attr:"tabindex:2"}}
+											</div>
+										</div>
+						            </div>
+									
+									<div class="row">
+										<div class="col-xs-6 col-sm-6 col-md-6">
+											<div class="form-group">
+												<!-- <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5"> -->
+												{{ form.state|add_class:"form-control input-lg"|attr:"id:nome"|attr:"placeholder:state"|attr:"tabindex:5"}}
+											</div>
+										</div>
+										<div class="col-xs-6 col-sm-6 col-md-6">
+											<div class="form-group">
+												<!-- <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6"> -->
+												{{ form.pc|add_class:"form-control input-lg"|attr:"id:nome"|attr:"placeholder:Postal Code"|attr:"tabindex:6"}}
+											</div>
+										</div>
+									</div>
+										<div class="form-group">
+						    			<!-- <input type="text" name="nome" id="nome" class="form-control input-lg" placeholder="Nome Completo" tabindex="3"> -->
+						    			{{ form.mobile|add_class:"form-control input-lg"|attr:"id:nome"|attr:"placeholder:Mobile Number"|attr:"tabindex:7"}}
+
+									</div>
+									<div class="row">
+										<div class="col-xs-3 col-sm-3 col-md-3">
+											<span class="button-checkbox">
+												<button type="button" class="btn" data-color="info" tabindex="7">I Agree</button>
+						                        <input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1">
+											</span>
+										</div>
+										<div class="col-xs-9 col-sm-9 col-md-9">
+											 By clicking <strong class="label label-primary">Register</strong>, you agree to the <a href="#" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a> set out by this site, including our Cookie Use.
+										</div>
+									</div>
+									
+									<hr class="colorgraph">
+									<div class="row">
+										<div class="col-md-4"></div>
+										<div class="col-xs-4 col-md-4"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+										<div class="col-md-4"></div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<!-- Modal -->
+						<div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+										<h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
+									</div>
+									<div class="modal-body">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-primary" data-dismiss="modal">I Agree</button>
+									</div>
+								</div><!-- /.modal-content -->
+							</div><!-- /.modal-dialog -->
+						</div><!-- /.modal -->
+						</div>
+
+						<center><h3><b>OR Register using Our APP</b></h3></center>
+
+						<center><div class="col-md-4"><img src="{% static 'images/android.png' %}" ></div></center>
+						<!-- <div class="top-grid-right col-md-2">
+							<ul>
+								<li><a href="#write"><span class="icon1"> </span></a></li>
+								<li><a href="#"><span class="icon2"> </span></a></li>
+								<div class="clearfix"> </div>
+							</ul>
+						</div> -->
+					</div>
+				</div>
+				<!--//End-top-grids-->
+				
+				<!--start-footer-->
+				<div class="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 footer-left">
+								<ul>
+									<li><a href="#"><img src="{% static 'images/footer-logo.png' %}" title="logo" /></a></li>
+									<li><p>Template by <a href="http://w3layouts.com/">W3layouts</a></p></li>
+								</ul>
+							</div>
+							<div class="col-md-6 footer-right">
+								<ul>
+									<li><a class="twitter" href="#"><span> </span></a></li>
+									<li><a class="facebook" href="#"><span> </span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--//End-footer-->
+			<!--//End-container-->
+		
+	<!--start-bg-->
+	</body>
+	<script type="text/javascript">
+		$(function () {
+		    $('.button-checkbox').each(function () {
+
+		        // Settings
+		        var $widget = $(this),
+		            $button = $widget.find('button'),
+		            $checkbox = $widget.find('input:checkbox'),
+		            color = $button.data('color'),
+		            settings = {
+		                on: {
+		                    icon: 'glyphicon glyphicon-check'
+		                },
+		                off: {
+		                    icon: 'glyphicon glyphicon-unchecked'
+		                }
+		            };
+
+		        // Event Handlers
+		        $button.on('click', function () {
+		            $checkbox.prop('checked', !$checkbox.is(':checked'));
+		            $checkbox.triggerHandler('change');
+		            updateDisplay();
+		        });
+		        $checkbox.on('change', function () {
+		            updateDisplay();
+		        });
+
+		        // Actions
+		        function updateDisplay() {
+		            var isChecked = $checkbox.is(':checked');
+
+		            // Set the button's state
+		            $button.data('state', (isChecked) ? "on" : "off");
+
+		            // Set the button's icon
+		            $button.find('.state-icon')
+		                .removeClass()
+		                .addClass('state-icon ' + settings[$button.data('state')].icon);
+
+		            // Update the button's color
+		            if (isChecked) {
+		                $button
+		                    .removeClass('btn-default')
+		                    .addClass('btn-' + color + ' active');
+		            }
+		            else {
+		                $button
+		                    .removeClass('btn-' + color + ' active')
+		                    .addClass('btn-default');
+		            }
+		        }
+
+		        // Initialization
+		        function init() {
+
+		            updateDisplay();
+
+		            // Inject the icon if applicable
+		            if ($button.find('.state-icon').length == 0) {
+		                $button.prepend('<i class="state-icon ' + settings[$button.data('state')].icon + '"></i> ');
+		            }
+		        }
+		        init();
+		    });
+		});
+	</script>
+</html>
+

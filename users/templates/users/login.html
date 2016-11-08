@@ -1,0 +1,216 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html> 
+	<head>
+		{% load static %}
+		{% load widget_tweaks %}
+		<title>Flat-Mate Website Template | Home :: w3layouts</title>
+		<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+		<link href="{% static 'css/theme-style.css' %}" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="images/fav-icon.png" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		<!--webfonts-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
+		<!--//webfonts-->
+		<!--requred-js-files-->
+	    <script src="{% static 'js/jquery.min.js' %}"></script>
+	    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<!--//requred-js-files-->
+	</head>
+	<body>
+		<!--start-bg-->
+		<div class="bg2">
+			<!--start-container-->
+			<div class="container">
+				<!-- start-header-->
+				<div class="row header">
+					<div class="row">
+						<div class="col-md-6">
+							<!--start-logo-->
+							<div class="well logo">
+								<a href="#"><img src="{% static 'images/logo.png' %}" title="Flatmate" /></a>
+							</div>
+							<!--//End-logo-->
+						</div>
+						<div class="well col-md-6">
+							<!--start-header-right-->
+							<!--//End-header-right-->
+						</div>
+					</div>
+				</div>
+					<!-- //End-header-->
+					<!--slide-banner-->
+					<!-- <div class="well slide-banner row">
+						<div class="slide-banner-left col-md-8">
+							<span> </span>
+							<h1>Power to You</h1>
+							<p>Now information is one click away.<br> 
+							Get the complete benefits of the schemes announced specially for you.<br> 
+							Register with us NOW.</p>
+							<p><a class="btn btn-primary btn-lg b-btn" href="#"> Guide Me</a></p>
+						</div>
+						<div class="well slide-banner-right col-md-4">
+							<img src="images/adhaar.png" class="img-responsive" alt="" /> 
+						</div>
+						<div class="clearfix"> </div>
+					</div> -->
+					<center><div class="slide-banner-left col-md-12">
+							<span> </span>
+							<h1>Login</h1>
+						</div></center>
+					<!--//slide-banner-->
+				</div>
+				</div>
+
+			<form role="form" action="{% url 'users:login'%}" method="POST">
+			{% csrf_token %}
+				<!--start-top-grids-->
+				<div class="top-grids">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4"></div>
+							<div class="top-grid-center col-md-4">
+								<div class="form-group">
+					                <div class="icon-addon addon-lg">
+					                    <!--<input type="text" placeholder="Adhaar Number" class="form-control" id="email">-->
+					                    {{ form.uid|add_class:"form-control"|attr:"id:email"|attr:"placeholder:Aadhaar Number" }}
+					                    <label for="email" class="glyphicon glyphicon-qrcode" rel="tooltip"></label>
+					                </div>
+					            </div>
+							</div>
+
+
+							<div class="col-md-4"></div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-4"></div>
+
+							<div class="top-grid-center col-md-4">
+								<div class="form-group">
+					                <div class="icon-addon addon-lg">
+					                    <!--<input type="text" placeholder="Adhaar Number" class="form-control" id="email">-->
+					                    {{ form.pc|add_class:"form-control"|attr:"id:postalcode"|attr:"placeholder:Postal Code" }}
+					                    <label for="postalcode" rel="tooltip" title="Postal Code"></label>
+					                </div>
+					            </div>
+							</div>
+							<div class="col-md-4"></div>
+						</div>
+						
+						<div class="row">
+							<div class="col-md-4"></div>
+
+							<div class="col-md-4">
+								<div styclass="login-info">
+									<input type="submit" value="Login" style="width:100%;height:45px;" class="login btn-primary">
+								</div>
+							</div>
+							<div class="col-md-4"></div>
+						</div>
+					</form>
+					</div>
+				</div>
+				<!--//End-top-grids-->
+				
+				<!--start-footer-->
+				<div class="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 footer-left">
+								<ul>
+									<li><a href="#"><img src="{% static 'images/footer-logo.png' %}" title="logo" /></a></li>
+									<li><p>Template by <a href="http://w3layouts.com/">W3layouts</a></p></li>
+								</ul>
+							</div>
+							<div class="col-md-6 footer-right">
+								<ul>
+									<li><a class="twitter" href="#"><span> </span></a></li>
+									<li><a class="facebook" href="#"><span> </span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--//End-footer-->
+			<!--//End-container-->
+		
+	<!--start-bg-->
+	</body>
+	<script type="text/javascript">
+		$(function () {
+		    $('.button-checkbox').each(function () {
+
+		        // Settings
+		        var $widget = $(this),
+		            $button = $widget.find('button'),
+		            $checkbox = $widget.find('input:checkbox'),
+		            color = $button.data('color'),
+		            settings = {
+		                on: {
+		                    icon: 'glyphicon glyphicon-check'
+		                },
+		                off: {
+		                    icon: 'glyphicon glyphicon-unchecked'
+		                }
+		            };
+
+		        // Event Handlers
+		        $button.on('click', function () {
+		            $checkbox.prop('checked', !$checkbox.is(':checked'));
+		            $checkbox.triggerHandler('change');
+		            updateDisplay();
+		        });
+		        $checkbox.on('change', function () {
+		            updateDisplay();
+		        });
+
+		        // Actions
+		        function updateDisplay() {
+		            var isChecked = $checkbox.is(':checked');
+
+		            // Set the button's state
+		            $button.data('state', (isChecked) ? "on" : "off");
+
+		            // Set the button's icon
+		            $button.find('.state-icon')
+		                .removeClass()
+		                .addClass('state-icon ' + settings[$button.data('state')].icon);
+
+		            // Update the button's color
+		            if (isChecked) {
+		                $button
+		                    .removeClass('btn-default')
+		                    .addClass('btn-' + color + ' active');
+		            }
+		            else {
+		                $button
+		                    .removeClass('btn-' + color + ' active')
+		                    .addClass('btn-default');
+		            }
+		        }
+
+		        // Initialization
+		        function init() {
+
+		            updateDisplay();
+
+		            // Inject the icon if applicable
+		            if ($button.find('.state-icon').length == 0) {
+		                $button.prepend('<i class="state-icon ' + settings[$button.data('state')].icon + '"></i> ');
+		            }
+		        }
+		        init();
+		    });
+		});
+	</script>
+</html>
+
