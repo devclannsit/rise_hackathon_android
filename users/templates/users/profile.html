@@ -1,12 +1,10 @@
 <!DOCTYPE HTML>
 <html> 
 	<head>
-
-		{% load static %}
-		{% load widget_tweaks %}
-		<title>Flat-Mate Website Template | Home :: w3layouts</title>
-		<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
-		<link href="{% static 'css/theme-style.css' %}" rel='stylesheet' type='text/css' />
+		<title>Profile</title>
+		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+		<link href="css/theme-style.css" rel='stylesheet' type='text/css' />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" type="image/x-icon" href="images/fav-icon.png" />
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -16,11 +14,37 @@
 		<link href='http://fonts.googleapis.com/css?family=Fauna+One' rel='stylesheet' type='text/css'>
 		<!--//webfonts-->
 		<!--requred-js-files-->
-	    <script src="{% static 'js/jquery.min.js' %}"></script>
-	    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+	    <script src="js/jquery.min.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
 		<!--//requred-js-files-->
 	</head>
 	<body>
+	<nav class="navbar navbar-inverse" style="background-color:#79b0f3;border-color: #E7E7E7;">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav">
+                <!-- <li><a href="#"><img src="/static/image/vmc_logo.png" style="height:50px"></a></li> -->
+                <li><a href="/" style="color: #fff;font-size:30px;line-height: 50px;">Home </a></li>
+                <!--<li><a href="#" style="color: #fff;font-size:30px;line-height: 50px;">Link</a></li>-->
+            </ul>
+
+        </div>
+        </div>
+        </nav>
 
 				<div class="container">
 				    <div class="row profile">
@@ -34,27 +58,19 @@
 								<!-- SIDEBAR USER TITLE -->
 								<div class="profile-usertitle">
 									<div class="profile-usertitle-name">
-										Marcus Doe
+										Marcus Doe<!-- NAME -->
 									</div>
 									<div class="profile-usertitle-job">
-										Developer
+										<!-- JOB -->
 									</div>
 								</div>
 								<!-- END SIDEBAR USER TITLE -->
 								<!-- SIDEBAR BUTTONS -->
-								<div class="profile-userbuttons">
-									<button type="button" class="btn btn-success btn-sm">Follow</button>
-									<button type="button" class="btn btn-danger btn-sm">Message</button>
-								</div>
+								
 								<!-- END SIDEBAR BUTTONS -->
 								<!-- SIDEBAR MENU -->
 								<div class="profile-usermenu">
 									<ul class="nav">
-										<li class="active">
-											<a href="#">
-											<i class="glyphicon glyphicon-home"></i>
-											Overview </a>
-										</li>
 										<li>
 											<a href="#">
 											<i class="glyphicon glyphicon-user"></i>
@@ -63,7 +79,7 @@
 										<li>
 											<a href="#" target="_blank">
 											<i class="glyphicon glyphicon-ok"></i>
-											Tasks </a>
+											Schemes Applied </a>
 										</li>
 										<li>
 											<a href="#">
@@ -77,14 +93,14 @@
 						</div>
 						<div class="col-md-9">
 				            <div class="profile-content">
-							   Some user related content goes here... <!--Put for loop for schemes-->
-							   <center><img src="{% static 'images/beema.jpg' %}" class="img-responsive" width="90%"><center>
+							   <!--Put for loop for schemes-->
+							   <center><img src="images/beema.jpg" class="img-responsive" width="90%"><center>
 							  	<br>
 							  	<br>
-							  	<center><img src="{% static 'images/fasal.jpg' %}" class="img-responsive" width="90%"><center>
+							  	<center><img src="images/fasal.jpg" class="img-responsive" width="90%"><center>
 							  	<br>
 							  	<br>
-							  	<center><img src="{% static 'images/suraksha.jpg' %}" class="img-responsive" width="90%"><center>
+							  	<center><img src="images/suraksha.jpg" class="img-responsive" width="90%"><center>
 							  	<br>
 				            </div>
 						</div>
@@ -100,7 +116,7 @@
 						<div class="row">
 							<div class="col-md-6 footer-left">
 								<ul>
-									<li><a href="#"><img src="{% static 'images/footer-logo.png' %}" title="logo" /></a></li>
+									<li><a href="#"><img src="images/footer-logo.png" title="logo" /></a></li>
 									
 								</ul>
 							</div>
